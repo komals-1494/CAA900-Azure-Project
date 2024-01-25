@@ -30,6 +30,20 @@ This is an example of how to embed a multiple line code snippet in markdown
 terraform plan #use to check what all changes will be done when the code is deployed
 terraform apply -auto-approve #use this to approve the changes and deploy the code
 ```
+
+### Sammple json objects
+
+This is an example of json object
+```json
+{  
+    "employee": {  
+        "name":       "sonoo",   
+        "salary":      56000,   
+        "married":    true  
+    }  
+}
+```
+
 ### Adding Hyperlink 
 - [A cool image](https://robohash.org/komal?set=set4)
 
