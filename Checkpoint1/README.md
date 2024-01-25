@@ -11,7 +11,10 @@
 - [My Collaborator image](#my-collaborator-image)
 - [Single Line Code Snippet](#single-line-code-snippet)
 - [Multiple Line Code Snippet](#multiple-line-code-snippet)
+- [Sample Json Object](#sample-json-object)
+- [Collaboration Comment](#collaboration-image)
 - [Adding Hyperlink ](#adding-hyperlink)
+  
 
 ### My Collaborator Image
 <img src="collaborators.jpg"
@@ -31,7 +34,7 @@ terraform plan #use to check what all changes will be done when the code is depl
 terraform apply -auto-approve #use this to approve the changes and deploy the code
 ```
 
-### Sammple json objects
+### Sample json object
 
 This is an example of json object
 ```json
@@ -43,6 +46,25 @@ This is an example of json object
     }  
 }
 ```
+### Collaboration in GitHub - Suggestions
+Suggestion: @AtoosaNasiri-Seneca
+
+Suggestion 1: It would be good to have more information regarding the due dates in the checkpoint instructions itself.
+Suggestion 2: The instructions are good but there is too much text. It would be good to have some reference images.
+Suggestion 3: It would be nice to have a sample submission template to have a better idea regarding the submission so that we know what needs to be done.
+
+Personal Details:
+
+Course Information: CAA900
+Student Name: Komal Sharma
+Seneca Email: ksharma145@myseneca.ca
+
+Link to the suggestion: -[Komal's Suggestion](https://github.com/orgs/Azure-Project-Winter2024/discussions/19?sort=old#discussioncomment-8203262)
+
+Suggestion's Image:
+<img src="Suggestion.png"
+     alt="suggestion image"
+     style="float: left; margin-right: 10px;" />
 
 ### Adding Hyperlink 
 - [A cool image](https://robohash.org/komal?set=set4)
