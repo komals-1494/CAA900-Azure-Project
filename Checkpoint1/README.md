@@ -13,8 +13,8 @@
 - [Multiple Line Code Snippet](#multiple-line-code-snippet)
 - [Sample Json Object](#sample-json-object)
 - [Sample Table](#sample-table)
-- [Collaboration Comment](#collaboration-in-gitHub-suggestions)
-- [Adding Hyperlink ](#adding-hyperlink)
+- [Collaboration In Github](#collaboration-in-gitHub)
+- [Adding Hyperlink ](#useful-hyperlink)
   
 
 ### My Collaborator Image
@@ -54,7 +54,8 @@ This is an example of json object
 | Name |`Komal`            |`Sharma`            |
 | Important Dates For me       |`Lets Start`            |<table>  <thead>  <tr>  <th>Date</th>  <th>Occassion</th>  </tr>  </thead>  <tbody> <tr> <td> 14th Sept 1994 </td> <td> 'Birthday' </td> </tr>  <tr>  <td>29th January 2021</td>  <td>'Engagement'</td> <tr>  <td>28th June 2021</td> <td>'Wedding'</td> </tr> </tbody>  </table>      |
 
-### Collaboration in GitHub - Suggestions
+### Collaboration in GitHub
+
 Suggestion: @AtoosaNasiri-Seneca
 
 Suggestion 1: It would be good to have more information regarding the due dates in the checkpoint instructions itself.
@@ -74,6 +75,10 @@ Suggestion's Image:
      alt="suggestion image"
      style="float: left; margin-right: 10px;" />
 
-### Sample Hyperlink
+### Useful Hyperlink
+- [Class Github Organisation](https://github.com/Azure-Project-Winter2024)
+- [Class Github Repository](https://github.com/Azure-Project-Winter2024/CAA900-CapstoneProject)
+- [Class Github Discussion](https://github.com/orgs/Azure-Project-Winter2024/discussions/19)
 - [A cool image](https://robohash.org/komal?set=set4)
+- [Reference for Json Object](https://www.javatpoint.com/json-object)
 
