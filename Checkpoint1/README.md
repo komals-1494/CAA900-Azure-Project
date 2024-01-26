@@ -12,7 +12,8 @@
 - [Single Line Code Snippet](#single-line-code-snippet)
 - [Multiple Line Code Snippet](#multiple-line-code-snippet)
 - [Sample Json Object](#sample-json-object)
-- [Collaboration Comment](#collaboration-image)
+- [Sample Table](#sample-table)
+- [Collaboration Comment](#collaboration-in-gitHub-suggestions)
 - [Adding Hyperlink ](#adding-hyperlink)
   
 
@@ -46,6 +47,13 @@ This is an example of json object
     }  
 }
 ```
+
+### Sample Table
+|                |Important Dates                 |In Table Format                 |
+|----------------|-------------------------------|-----------------------------|
+| Name |`Komal`            |`Sharma`            |
+| Important Dates For me       |`Lets Start`            |<table>  <thead>  <tr>  <th>Date</th>  <th>Occassion</th>  </tr>  </thead>  <tbody> <tr> <td> 14th Sept 1994 </td> <td> 'Birthday' </td> </tr>  <tr>  <td>29th January 2021</td>  <td>'Engagement'</td> <tr>  <td>28th June 2021</td> <td>'Wedding'</td> </tr> </tbody>  </table>      |
+
 ### Collaboration in GitHub - Suggestions
 Suggestion: @AtoosaNasiri-Seneca
 
@@ -66,6 +74,6 @@ Suggestion's Image:
      alt="suggestion image"
      style="float: left; margin-right: 10px;" />
 
-### Adding Hyperlink 
+### Sample Hyperlink
 - [A cool image](https://robohash.org/komal?set=set4)
 
