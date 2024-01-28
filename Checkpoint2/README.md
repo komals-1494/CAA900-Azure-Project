@@ -7,3 +7,9 @@
 - **TEACHER’S NAME: Atoosa Nasiri**
 
 ---
+
+### Table of Contents
+1. Part A - Adding Files - Local Repo Workflow
+2. Part B - Inspecting Local Repo with `git status` and `git log`
+3. Part C - Creating & Merging Branches
+4. Part D - Git Branching Strategy Review Question
