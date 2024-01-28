@@ -30,5 +30,7 @@ Here is the screenshot for the git status and git log command:
      alt="Status VS Log"
      style="float: left; margin-right: 10px;" />
 
+How do these two commands differ?
+
 ### Creating and Merging Branches
 ### Git Branching Strategy Review Question
