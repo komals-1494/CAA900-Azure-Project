@@ -70,5 +70,18 @@ Author: 129875217-myseneca <ksharma145@myseneca.ca>
 Date:   Sun Jan 28 06:57:18 2024 -0500
 
     Added more information in README.md
+```
 
 ### Git Branching Strategy Review Question
+
+What are the differences between develop branch and main branch?
+Differences between develop branch and main branch:
+The primary distinction between the develop and main branches lies in their roles within the Git branching strategy. The develop branch serves as the active development area, housing ongoing work, feature development, and bug fixes. Developers create feature and bugfix branches from develop and merge them back upon completion. In contrast, the main branch represents production-ready code, with its HEAD reflecting the latest deployed version. Hotfix branches are created from main to address urgent issues, ensuring a stable production environment.
+
+What are the three supporting branches? Briefly describe the function of each of these supporting branches.
+Three Supporting Branches and Their Functions:
+The three supporting branches in this Git branching model serve specific purposes in facilitating parallel development, bug tracking, and production issue resolution. Feature/Bugfix branches, branching from and merging into develop, are employed for developing new features or addressing bugs. Hotfix branches, originating from a tagged main, provide an avenue for immediate fixes to live production versions and merge back into both main and develop. Release branches, created from tagged develop, prepare for a release by bumping version numbers and conducting final housekeeping before merging into both main and develop.
+
+What are the best practices in working with release branches?
+Best Practices for Working with Release Branches:
+Effective handling of release branches involves several best practices. Developers should create the release branch from a tagged develop, ensuring that all planned features and bugfixes for the release are merged into develop. Bumping version numbers and performing any last-minute housekeeping should occur within the release branch. After readiness, the release branch is merged into main and tagged for production deployment. Subsequently, merging the release branch back into develop keeps the development branch up to date with the latest release. Utilizing semantic versioning for version numbers helps convey the nature of changes (major, minor, patch) in the release, fostering clarity and consistency in versioning practices.
