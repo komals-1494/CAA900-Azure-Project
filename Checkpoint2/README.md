@@ -19,7 +19,9 @@
 Here are the link for the files added for each status change. You can also find these files in the checkpoint2 repository.
 
 [Untracked Changes](git_status_untracked.txt)
+
 [Uncommitted Changes](git_status_uncommitted.txt)
+
 [Commited Changes](git_status_committed.txt)
 
 ### Inspecting Local Repo with git status and git log
