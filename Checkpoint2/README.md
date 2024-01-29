@@ -33,6 +33,7 @@ Here is the screenshot for the git status and git log command:
      style="float: left; margin-right: 10px;" />
 
 How do these two commands differ?
+When we do git status we get the brief information about the current status. What is added, what is commited. Further step that needs to be taken. It is like the present in our git time machine. It will only talk about the current status whereas in log we can the history from our time machine, whereall we travelled and what all we did. It give a detailed information about the changes that we have done.
 
 ### Creating and Merging Branches
 ### Git Branching Strategy Review Question
