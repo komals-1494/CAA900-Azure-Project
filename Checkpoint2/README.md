@@ -34,6 +34,7 @@ Here is the screenshot for the git status and git log command:
 
 How do these two commands differ?
 When we do git status we get the brief information about the current status. What is added, what is commited. Further step that needs to be taken. It is like the present in our git time machine. It will only talk about the current status whereas in log we can the history from our time machine, whereall we travelled and what all we did. It give a detailed information about the changes that we have done.
+
 Here in the example we can see that got status only give the information about the current status that everything is upto date but if we check the logs command we only ran for the last 5 commit and we can get the information about when that happened and who was the author. It also gives the information about the commit id and the commit message that we added during the time of commit.
 
 ### Creating and Merging Branches
@@ -75,12 +76,20 @@ Date:   Sun Jan 28 06:57:18 2024 -0500
 ### Git Branching Strategy Review Question
 
 What are the differences between develop branch and main branch?
+
 Differences between develop branch and main branch:
 The primary distinction between the develop and main branches lies in their roles within the Git branching strategy. The develop branch serves as the active development area, housing ongoing work, feature development, and bug fixes. Developers create feature and bugfix branches from develop and merge them back upon completion. In contrast, the main branch represents production-ready code, with its HEAD reflecting the latest deployed version. Hotfix branches are created from main to address urgent issues, ensuring a stable production environment.
 
 What are the three supporting branches? Briefly describe the function of each of these supporting branches.
+
 Three Supporting Branches and Their Functions:
-The three supporting branches in this Git branching model serve specific purposes in facilitating parallel development, bug tracking, and production issue resolution. Feature/Bugfix branches, branching from and merging into develop, are employed for developing new features or addressing bugs. Hotfix branches, originating from a tagged main, provide an avenue for immediate fixes to live production versions and merge back into both main and develop. Release branches, created from tagged develop, prepare for a release by bumping version numbers and conducting final housekeeping before merging into both main and develop.
+The three supporting branches in this Git branching model serve specific purposes in facilitating parallel development, bug tracking, and production issue resolution. 
+
+Feature/Bugfix branches, branching from and merging into develop, are employed for developing new features or addressing bugs. 
+
+Hotfix branches, originating from a tagged main, provide an avenue for immediate fixes to live production versions and merge back into both main and develop. 
+
+Release branches, created from tagged develop, prepare for a release by bumping version numbers and conducting final housekeeping before merging into both main and develop.
 
 What are the best practices in working with release branches?
 Best Practices for Working with Release Branches:
