@@ -86,13 +86,18 @@ Once we have a sucessful pull request the color is changed to maroon in both the
 
 Here is the screenshot of index.html in VSCode:
 <img src="index in vs.png"
-     alt="Status VS Log"
+     alt="Index in VS"
      style="float: left; margin-right: 10px;" />
 
 
 Here is the screenshot of Resolve in Merge Editor:
 <img src="resolve in merge editor.png"
-     alt="Status VS Log"
+     alt="Resolve in merge editor"
+     style="float: left; margin-right: 10px;" />
+
+Here is the screenshot of index.html with both the paragraph:
+<img src="index.png"
+     alt="Index"
      style="float: left; margin-right: 10px;" />
 
 
