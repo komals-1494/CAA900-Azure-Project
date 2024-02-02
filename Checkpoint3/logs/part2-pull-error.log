@@ -1,0 +1,9 @@
+POST git-upload-pack (196 bytes)
+POST git-upload-pack (533 bytes)
+From https://github.com/129875217-myseneca/CAA900-Azure-Project
+   c13341c..88f5ca9  main        -> origin/main
+ = [up to date]      dummy       -> origin/dummy
+ = [up to date]      feat-emojis -> origin/feat-emojis
+Auto-merging Checkpoint3/conflict-resolution/index.html
+CONFLICT (content): Merge conflict in Checkpoint3/conflict-resolution/index.html
+Automatic merge failed; fix conflicts and then commit the result.
