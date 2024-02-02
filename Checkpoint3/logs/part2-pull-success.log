@@ -1,0 +1,9 @@
+POST git-upload-pack (196 bytes)
+From https://github.com/129875217-myseneca/CAA900-Azure-Project
+ = [up to date]      main        -> origin/main
+ = [up to date]      dummy       -> origin/dummy
+ = [up to date]      feat-emojis -> origin/feat-emojis
+Updating c13341c..88f5ca9
+Fast-forward
+ Checkpoint3/conflict-resolution/index.html | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
