@@ -43,6 +43,44 @@ updating local tracking ref 'refs/remotes/origin/main'
 Once the changes are overwritten in the remote repo with local repo changes the final colour is set to green. This is happening because the change in local repo was set to green and it was forced on the remote repo.
 
 ### Reset Local Commit Head
+Pull Error Log
+```plaintext
+POST git-upload-pack (196 bytes)
+POST git-upload-pack (533 bytes)
+From https://github.com/129875217-myseneca/CAA900-Azure-Project
+   c13341c..88f5ca9  main        -> origin/main
+ = [up to date]      dummy       -> origin/dummy
+ = [up to date]      feat-emojis -> origin/feat-emojis
+Auto-merging Checkpoint3/conflict-resolution/index.html
+CONFLICT (content): Merge conflict in Checkpoint3/conflict-resolution/index.html
+Automatic merge failed; fix conflicts and then commit the result.
+```
+
+Reset Head Log
+```plaintext
+HEAD is now at c13341c Updated Readme.md with part 1
+commit c13341c713ab80eb2c8d596f680bebca7165aaec
+Author: 129875217-seneca <ksharma145@myseneca.ca>
+Date:   Thu Feb 1 20:55:03 2024 -0500
+
+    Updated Readme.md with part 1
+
+```
+
+Pull Success Log
+```plaintext
+POST git-upload-pack (196 bytes)
+From https://github.com/129875217-myseneca/CAA900-Azure-Project
+ = [up to date]      main        -> origin/main
+ = [up to date]      dummy       -> origin/dummy
+ = [up to date]      feat-emojis -> origin/feat-emojis
+Updating c13341c..88f5ca9
+Fast-forward
+ Checkpoint3/conflict-resolution/index.html | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+```
+
+Once we have a sucessful pull request the color is changed to maroon in both the local and remote repo as we have pulled the changes from the remote repo which had the color maroon.
 
 ### Merge Editor
 
