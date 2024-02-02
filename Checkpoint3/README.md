@@ -84,4 +84,17 @@ Once we have a sucessful pull request the color is changed to maroon in both the
 
 ### Merge Editor
 
+Here is the screenshot of index.html in VSCode:
+<img src="index in vs.png"
+     alt="Status VS Log"
+     style="float: left; margin-right: 10px;" />
+
+
+Here is the screenshot of Resolve in Merge Editor:
+<img src="resolve in merge editor.png"
+     alt="Status VS Log"
+     style="float: left; margin-right: 10px;" />
+
+
+
 ### Creating Pull Request
