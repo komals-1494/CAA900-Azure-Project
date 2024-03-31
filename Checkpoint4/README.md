@@ -54,9 +54,16 @@ az network vnet subnet create is the CLI command to create a subnet in the speci
 
 [router_subnet_details.json](bash-scripts/router_subnet_details.json)
 
-5. List all routes in `RT-xx` using `az network route-table route list` command and send the output in `table` format to `route_list.tbl`file
+5. List all routes in `RT-xx` using `az network route-table route list` command and send the output in `table` format to `route_list.
+
+| AddressPrefix   | HasBgpOverride | Name             | NextHopIpAddress | NextHopType      | ProvisioningState | ResourceGroup     |
+|-----------------|----------------|------------------|------------------|------------------|-------------------|-------------------|
+| 172.17.96.32/27 | False          | Route-to-Server  | 192.168.96.36    | VirtualAppliance | Succeeded         | Student-RG-1230102|
+| 10.28.202.0/24  | False          | Route-to-Desktop | 192.168.96.36    | VirtualAppliance | Succeeded         | Student-RG-1230102|
+
 6. Get the details of route between your `Router-xx SN1` and `Server-xx SN` using `az network route-table route show` and send the output in `json` format to `route_details.json`
-7. (Optional) What CLI command will show you which subnet is associated to which route in route table? _(Hint: maybe start with 'az network vnet subnet show`)_
+
+[route_details.json](bash-scripts/route_details.json)
 
 ### Network Review Questions
 
