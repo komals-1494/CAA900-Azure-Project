@@ -9,12 +9,12 @@
 ---
 
 ## Table of Contents
-[Part A - Creating Network Resources using Azure CLI](#creating-network-resources-using-azure-cli)
-[Part B - Working with Azure CLI Bash](#working-with-azure-cli-bash)
-[Part C - Network Review Questions](#network-review-questions)
-[Part D - Creating Virtual Machines](#creating-virtual-machines-using-azure-cli)
-[Part E - Creating Custom Images](#creating-custom-images-from-vms-using-azure-cli)
-[Part F - Clean Up your Environment](#clean-up-your-environment-using-azure-cli)
+1. [Part A - Creating Network Resources using Azure CLI](#creating-network-resources-using-azure-cli)
+2. [Part B - Working with Azure CLI Bash](#working-with-azure-cli-bash)
+3. [Part C - Network Review Questions](#network-review-questions)
+4. [Part D - Creating Virtual Machines](#creating-virtual-machines-using-azure-cli)
+5. [Part E - Creating Custom Images](#creating-custom-images-from-vms-using-azure-cli)
+6. [Part F - Clean Up your Environment](#clean-up-your-environment-using-azure-cli)
 
 ### Creating Network Resources using Azure CLI
 
@@ -36,7 +36,7 @@ az network vnet subnet create is the CLI command to create a subnet in the speci
 
 
 1. List all VNETs using `az network vnet list` command and send the output in `json` format to `vnet_list.json`file
-[vnet_list.json](vnet_list.json)
+[vnet_list.json](bashscript/vnet_list.json)
 
 2. Get the details of your `default student vnet` using `az show` command and send the output in `json` format to `student_vnet.json` file
 3. List all peerings using `az network vnet peering list` command and send the output in `table` format to `peerings.tbl`file
