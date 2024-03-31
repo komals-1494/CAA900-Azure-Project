@@ -1,0 +1,6 @@
+Name                                          ResourceGroup       Location       Zones    Sku              OsType    SizeGb    ProvisioningState
+--------------------------------------------  ------------------  -------------  -------  ---------------  --------  --------  -------------------
+LR-96_disk1_27c62050cb4c408787b490f84b3f38d0  STUDENT-RG-1230102  canadacentral           StandardSSD_LRS  Linux     64        Succeeded
+LS-96_disk1_44cd6e34c7114c259044f48786c6efe0  STUDENT-RG-1230102  canadacentral           StandardSSD_LRS  Linux     64        Succeeded
+WC-96_disk1_c4377db8964f4fc59f4880b8403927cd  STUDENT-RG-1230102  canadacentral           StandardSSD_LRS  Windows   127       Succeeded
+WS-96_disk1_a2d9b79fa0d8425b83008d8c7401b48d  STUDENT-RG-1230102  canadacentral           StandardSSD_LRS  Windows   127       Succeeded

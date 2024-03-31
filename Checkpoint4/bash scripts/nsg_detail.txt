@@ -1,0 +1,6 @@
+Location       Name       ProvisioningState    ResourceGroup       ResourceGuid
+-------------  ---------  -------------------  ------------------  ------------------------------------
+canadacentral  LR-NSG-96  Succeeded            Student-RG-1230102  4633500a-9017-4044-958f-e8941c8b8984
+canadacentral  LS-NSG-96  Succeeded            Student-RG-1230102  035027ad-caa7-4821-b269-38616409ee87
+canadacentral  WC-NSG-96  Succeeded            Student-RG-1230102  8e1616e7-2935-4073-9693-2c5558c0277d
+canadacentral  WS-NSG-96  Succeeded            Student-RG-1230102  d8e965f8-21e0-4d93-8f5f-80b53235a914

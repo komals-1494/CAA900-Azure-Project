@@ -1,0 +1,6 @@
+Name    ResourceGroup       Location       Zones
+------  ------------------  -------------  -------
+LR-96   STUDENT-RG-1230102  canadacentral
+LS-96   STUDENT-RG-1230102  canadacentral
+WC-96   STUDENT-RG-1230102  canadacentral
+WS-96   STUDENT-RG-1230102  canadacentral
