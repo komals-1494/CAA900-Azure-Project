@@ -37,9 +37,11 @@ az network vnet subnet create is the CLI command to create a subnet in the speci
 
 1. List all VNETs using `az network vnet list` command and send the output in `json` format to `vnet_list.json`file
 
-[vnet_list.json](\bash scripts\vnet_list.json)
+[vnet_list.json] (\bash scripts\vnet_list.json)
 
-2. Get the details of your `default student vnet` using `az show` command and send the output in `json` format to `student_vnet.json` file
+2. Get the details of your `default student vnet` using `az show` command and send the output in `json` format to `student_vnet.json` files
+
+[student_vnet.json] (\bash scripts\student_vnet.json)
 3. List all peerings using `az network vnet peering list` command and send the output in `table` format to `peerings.tbl`file
 4. Get the details of your `Router-XX` subnet `SN1` using `az show` command in `json` format and `query` it for details of subnet and rout associations. Only submit the specific property you are asked for. You will need to embed this in your `README.md` as per instructions.
 5. List all routes in `RT-xx` using `az network route-table route list` command and send the output in `table` format to `route_list.tbl`file
