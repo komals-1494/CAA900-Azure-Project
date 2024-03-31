@@ -102,6 +102,7 @@ Virtual Network Gateways are configured and used in Azure to establish secure co
 
 1. List all VMs and send the output in `table` format to `vm_list.tbl` file. What command did you use?
 az vm list --resource-group Student-RG-1230102 --output table > vm_list.tbl
+
 | Name  | ResourceGroup      | Location       | Zones |
 |-------|--------------------|----------------|-------|
 | LR-96 | Student-RG-1230102 | canadacentral |       |
@@ -111,10 +112,12 @@ az vm list --resource-group Student-RG-1230102 --output table > vm_list.tbl
 
 2. Get the details of your `WC-99` using `az show` command and send the output in `json` format to `WC-99-details.json` file. What command did you use?
 az vm show --name WC-96 --resource-group Student-RG-1230102 --output json > WC-96-details.json
+
 [WC-96-details.json](bash-scripts/WC-96-details.json)
 
 3. List all NSG using `az list` command and send the output in `table` format to `nsg_list.tbl`file. What command did you use?
 az network nsg list --resource-group Student-RG-1230102 --output table > nsg_list.tbl
+
 | Location       | Name       | ProvisioningState | ResourceGroup      | ResourceGuid                          |
 |----------------|------------|-------------------|--------------------|---------------------------------------|
 | canadacentral | LR-NSG-96  | Succeeded         | Student-RG-1230102 | 4633500a-9017-4044-958f-e8941c8b8984 |
@@ -137,18 +140,90 @@ Auto-shutdown configuration is not included in the vm_create script because it's
 
 
 1. What are the difference between the script that creates VM from Azure Generic Image vs Custom Image? A good place to start is to compare the two scripts `custom_vm_create.sh` and `custom_vm_create.sh` and check the parameters passed to `az vm create` command. Elaborate the differences you observe.
+Generic VM Creation:
+Uses pre-defined VM images available in the Azure Marketplace or provided by Microsoft.
+Typically involves specifying the --image parameter with the image name or ID.
+Custom VM Creation:
+Utilizes custom images created from generalized VMs or specialized disks.
+Requires specifying the --image parameter with the custom image's resource ID.
+Additional customization parameters may include VM size, networking options, etc.
+
 2. If you run `custom_vm_create.sh` without custom image `version` number, the script will throw an error and show you the usage suggestion. What is the usage suggestion?
+
+Usage: ./image_create.sh <target_version>
+
 3. The script is purposefully written such that it waits on each custom image creation to be completed before proceeding to next image. Can you update the script such that custom images creation runs in background, i.e. how can you parallelize the process?_Hint: only provide the single line command that you need to update_
-4. Once all custom images are successfully created, run a command in CLI that lists all your Custom Images. Change the output format to table format and embed the answer in your submission.
-5. Delete your VMs using the proper script after above step is completed. Then re-create VMs using your custom images. Check is all VMs are accessible, i.e. Client VM can be reached via Bastion and Linux VMs can be accessed with ssh.
-6. Get a list of your VM, NSG, NIC, Disks, and Custom Iamges using Azure CLI in table format. Which ones are empty? **Do not include screenshots, just embed the output in **table** format in your submission.
+
+az image create ... &   # Add '&' to run it in background
+
+4. Once all custom images are successfully created, run a command in CLI that lists all your Custom Images.
+
+| HyperVGeneration    | Location       | Name             | ProvisioningState    | ResourceGroup       |
+|---------------------|----------------|------------------|----------------------|---------------------|
+| V1                  | canadacentral | lr-96-ver-1.0.0 | Succeeded            | Student-RG-1230102 |
+| V1                  | canadacentral | ls-96-ver-1.0.0 | Succeeded            | Student-RG-1230102 |
+| V1                  | canadacentral | wc-96-ver-1.0.0 | Succeeded            | Student-RG-1230102 |
+| V1                  | canadacentral | ws-96-ver-1.0.0 | Succeeded            | Student-RG-1230102 |
+
+5. Get a list of your VM, NSG, NIC, Disks, and Custom Iamges using Azure CLI in table format. Which ones are empty?
+
+VM LIST:
+
+| Name  | ResourceGroup       | Location       | Zones |
+|-------|---------------------|----------------|-------|
+| LR-96 | Student-RG-1230102  | canadacentral |       |
+| LS-96 | Student-RG-1230102  | canadacentral |       |
+| WC-96 | Student-RG-1230102  | canadacentral |       |
+| WS-96 | Student-RG-1230102  | canadacentral |       |
+
+NSG LIST:
+
+| Location       | Name       | ProvisioningState | ResourceGroup      | ResourceGuid                         |
+|----------------|------------|-------------------|--------------------|--------------------------------------|
+| canadacentral | LR-NSG-96  | Succeeded         | Student-RG-1230102 | 4633500a-9017-4044-958f-e8941c8b8984 |
+| canadacentral | LS-NSG-96  | Succeeded         | Student-RG-1230102 | 035027ad-caa7-4821-b269-38616409ee87 |
+| canadacentral | WC-NSG-96  | Succeeded         | Student-RG-1230102 | 8e1616e7-2935-4073-9693-2c5558c0277d |
+| canadacentral | WS-NSG-96  | Succeeded         | Student-RG-1230102 | d8e965f8-21e0-4d93-8f5f-80b53235a914 |
+
+NIC LIST:
+
+| AuxiliaryMode | AuxiliarySku | DisableTcpStateTracking | EnableAcceleratedNetworking | EnableIPForwarding | Location       | MacAddress         | Name   | NicType  | Primary | ProvisioningState | ResourceGroup      | ResourceGuid                         | VnetEncryptionSupported |
+|---------------|--------------|-------------------------|-----------------------------|--------------------|----------------|-------------------|--------|----------|---------|-------------------|-------------------|--------------------------------------|-------------------------|
+| None          | None         | False                   | False                       | False              | canadacentral | 60-45-BD-5D-98-41 | lr-96  | Standard | True    | Succeeded         | Student-RG-1230102 | 1061dff2-ba4a-4054-ae01-b758304c0004 | False                   |
+| None          | None         | False                   | False                       | False              | canadacentral | 00-0D-3A-F3-A5-64 | ls-96  | Standard | True    | Succeeded         | Student-RG-1230102 | c38485aa-a778-4846-a22f-02e924a89b41 | False                   |
+| None          | None         | False                   | False                       | False              | canadacentral | 00-22-48-3D-B2-45 | wc-96  | Standard | True    | Succeeded         | Student-RG-1230102 | 34d66f9e-9000-417e-8fb3-fe6e297538ff | False                   |
+| None          | None         | False                   | False                       | False              | canadacentral | 00-0D-3A-E9-35-17 | ws-96  | Standard | True    | Succeeded         | Student-RG-1230102 | f36e94d7-28d1-4b6c-818d-7a45bc6e2f3c | False                   |
+
+DISK LIST:
+
+| Name                                          | ResourceGroup      | Location       | Zones | Sku             | OsType | SizeGb | ProvisioningState |
+|-----------------------------------------------|--------------------|----------------|-------|----------------|--------|--------|-------------------|
+| LR-96_disk1_27c62050cb4c408787b490f84b3f38d0 | STUDENT-RG-1230102 | canadacentral  |       | StandardSSD_LRS | Linux  | 64     | Succeeded         |
+| LS-96_disk1_44cd6e34c7114c259044f48786c6efe0 | STUDENT-RG-1230102 | canadacentral  |       | StandardSSD_LRS | Linux  | 64     | Succeeded         |
+| WC-96_disk1_c4377db8964f4fc59f4880b8403927cd | STUDENT-RG-1230102 | canadacentral  |       | StandardSSD_LRS | Windows| 127    | Succeeded         |
+| WS-96_disk1_a2d9b79fa0d8425b83008d8c7401b48d | STUDENT-RG-1230102 | canadacentral  |       | StandardSSD_LRS | Windows| 127    | Succeeded         |
+
+CUSTOM IMAGE:
+
+| HyperVGeneration | Location       | Name             | ProvisioningState | ResourceGroup      |
+|------------------|----------------|------------------|-------------------|---------------------|
+| V1               | canadacentral | lr-96-ver-1.0.0 | Succeeded         | Student-RG-1230102 |
+| V1               | canadacentral | ls-96-ver-1.0.0 | Succeeded         | Student-RG-1230102 |
+| V1               | canadacentral | wc-96-ver-1.0.0 | Succeeded         | Student-RG-1230102 |
+| V1               | canadacentral | ws-96-ver-1.0.0 | Succeeded         | Student-RG-1230102 |
 
 ### Clean Up your Environment using Azure CLI
 
 Answer below questions for this section:
 
 1. After deleting list all your VMs using `az  vm list ...` with the output in `table` format. What command did you use? How can you ensure all your VMs are deleted?
-2. Why you are not asked to delete Custom Images? What is the difference between VM and Custom Image that makes VM a very costly resource and Custom Images, negligible? (_Hint: It is related to OS Disk_)
-3. What are cost implications of NSG or NIC? Why are you deleting them?
-4. Why you are not deleting Network backend like VNET and Route-Tables?
+We use the command az vm list --output table after deleting all the vm and it gave us a blank file which means that all the VMs are deleted.
 
+2. Why you are not asked to delete Custom Images? What is the difference between VM and Custom Image that makes VM a very costly resource and Custom Images, negligible? (_Hint: It is related to OS Disk_)
+Custom images aren't deleted because they're just templates, not running instances like VMs. VMs cost more because they use compute resources, storage, and networking continuously, while custom images don't incur extra costs once created.
+
+3. What are cost implications of NSG or NIC? Why are you deleting them?
+NSGs and NICs have minimal costs compared to VMs but can add management overhead if not managed properly. Deleting them when not needed helps reduce unnecessary costs and simplifies network management.
+
+4. Why you are not deleting Network backend like VNET and Route-Tables?
+VNETs and Route Tables are foundational network components shared among multiple resources. They're retained unless there's a specific need to remove them to avoid disrupting network connectivity. Unlike VMs, they don't usually incur ongoing compute or storage costs, so they're less of a concern for cost optimization.
