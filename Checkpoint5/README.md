@@ -171,5 +171,33 @@ Static hostname: LS-96.CAA900-2241.com
       Architecture: x86-64
 ```
 ### Creating & Configuring VM Images - Using Portal
+
+1. Run a command in CLI that lists all your Custom Images
+
+```bash
+az image list --output table
+HyperVGeneration    Location       Name             ProvisioningState    ResourceGroup
+------------------  -------------  ---------------  -------------------  ------------------
+V1                  canadacentral  lr-96-ver-1.0.0  Succeeded            STUDENT-RG-1230102
+V1                  canadacentral  lr-96-ver-0.0.1  Succeeded            STUDENT-RG-1230102
+V1                  canadacentral  ls-96-ver-0.0.1  Succeeded            STUDENT-RG-1230102
+V1                  canadacentral  ls-96-ver-1.0.0  Succeeded            STUDENT-RG-1230102
+V1                  canadacentral  wc-96-ver-0.0.1  Succeeded            STUDENT-RG-1230102
+V1                  canadacentral  wc-96-ver-1.0.0  Succeeded            STUDENT-RG-1230102
+V1                  canadacentral  ws-96-ver-1.0.0  Succeeded            STUDENT-RG-1230102
+V1                  canadacentral  ws-96-ver-0.0.1  Succeeded            STUDENT-RG-1230102
+```
+
+2. Run a command in CLI that lists all your VMs.
+
+```bash
+az vm list --output table
+```
+all the vms are deleted.
+
+3. Recreate all VMs from your images, and establish basic connectivity. How long the entire process took? How can you do this more efficiently?
+
+It tool around 15 min to create all the vms and establish the connectivity. 
+
 ### Azure Cost Analysis Charts
 ### Create Customized Azure Dashboard
