@@ -110,6 +110,64 @@ az network nic show --resource-group $RG --name lr-96981_z1 --query "enableIPFor
 ```
 
 ### Basic Connectivity - VM Configuration
+
+1. In configuring your Linux VMs, for the step "Remove the firewalld service", which command will you be using?
+
+   sudo systemctl stop firewalld
+   sudo systemctl disable firewalld
+
+2. In configuring your Linux VMs, what command do you use to check the status of iptabels?
+
+   sudo systemctl status iptables
+
+3. How can you make iptables service start automatically after reboot on CenOS/RHEL8? 👉 Hint: RHEL7: How to disable `Firewalld`` and use Iptables instead
+
+   sudo systemctl start iptables
+   sudo systemctl start ip6tables
+
+4. Run a command in LR-xx that shows all iptables chains with their order number. What is the default setting? Include both the command and its output in your submission. How could you improve these settings to be less vulnerable to attacks?
+
+sudo iptables -L --line-numbers
+Chain INPUT (policy ACCEPT)
+num  target     prot opt source               destination
+1    ACCEPT     all  --  anywhere             anywhere             state RELATED,ESTABLISHED
+2    ACCEPT     icmp --  anywhere             anywhere
+3    ACCEPT     all  --  anywhere             anywhere
+4    ACCEPT     tcp  --  anywhere             anywhere             state NEW tcp dpt:ssh
+5    REJECT     all  --  anywhere             anywhere             reject-with icmp-host-prohibited
+
+Chain FORWARD (policy ACCEPT)
+num  target     prot opt source               destination
+1    REJECT     all  --  anywhere             anywhere             reject-with icmp-host-prohibited
+
+Chain OUTPUT (policy ACCEPT)
+num  target     prot opt source               destination
+
+5. Run a command that shows the hostname in LR-XX and LX-XX. Embed the output in your submission.
+sudo hostnamectl status
+
+   Static hostname: LR-96.CAA900-2241.com
+         Icon name: computer-vm
+           Chassis: vm
+        Machine ID: 1fe5599b5ddf4c45a4d0ef529bd9da38
+           Boot ID: 2751f99ddbab4577b931dcd2f7f01280
+    Virtualization: microsoft
+  Operating System: Red Hat Enterprise Linux 8.1 (Ootpa)
+       CPE OS Name: cpe:/o:redhat:enterprise_linux:8.1:GA
+            Kernel: Linux 4.18.0-147.57.1.el8_1.x86_64
+      Architecture: x86-64
+
+Static hostname: LS-96.CAA900-2241.com
+         Icon name: computer-vm
+           Chassis: vm
+        Machine ID: 1fe5599b5ddf4c45a4d0ef529bd9da38
+           Boot ID: 886bcd22a8ae4d0aa0a6f3c7ab8fd18a
+    Virtualization: microsoft
+  Operating System: Red Hat Enterprise Linux 8.1 (Ootpa)
+       CPE OS Name: cpe:/o:redhat:enterprise_linux:8.1:GA
+            Kernel: Linux 4.18.0-147.57.1.el8_1.x86_64
+      Architecture: x86-64
+
 ### Creating & Configuring VM Images - Using Portal
 ### Azure Cost Analysis Charts
 ### Create Customized Azure Dashboard
