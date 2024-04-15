@@ -197,7 +197,12 @@ all the vms are deleted.
 
 3. Recreate all VMs from your images, and establish basic connectivity. How long the entire process took? How can you do this more efficiently?
 
-It tool around 15 min to create all the vms and establish the connectivity. 
+It took around 15 min to create all the vms and establish the connectivity. 
 
 ### Azure Cost Analysis Charts
+
+<img title="Cost Analysis" alt="Analysis" src="./cost analysis.PNG">
+
 ### Create Customized Azure Dashboard
+
+<img title="Dashboard" alt="Dashboard" src="./Dashboards.PNG">
