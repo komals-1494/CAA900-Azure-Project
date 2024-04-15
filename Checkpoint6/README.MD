@@ -52,3 +52,8 @@ Static hostname: LR-96.CAA900-2241.com
 ## Part B - Azure Cost Analysis Charts
 
 Cost Analysis Chart:
+<img title="Cost Analysis" alt="Analysis" src="./costanalysis.png">
+
+Dashboard:
+
+<img title="Dashboard" alt="Dashboard" src="./Dashboards.PNG">
