@@ -128,6 +128,7 @@ az network nic show --resource-group $RG --name lr-96981_z1 --query "enableIPFor
 4. Run a command in LR-xx that shows all iptables chains with their order number. What is the default setting? Include both the command and its output in your submission. How could you improve these settings to be less vulnerable to attacks?
 
 sudo iptables -L --line-numbers
+```bash
 Chain INPUT (policy ACCEPT)
 num  target     prot opt source               destination
 1    ACCEPT     all  --  anywhere             anywhere             state RELATED,ESTABLISHED
@@ -142,10 +143,11 @@ num  target     prot opt source               destination
 
 Chain OUTPUT (policy ACCEPT)
 num  target     prot opt source               destination
+```
 
 5. Run a command that shows the hostname in LR-XX and LX-XX. Embed the output in your submission.
 sudo hostnamectl status
-
+```bash
    Static hostname: LR-96.CAA900-2241.com
          Icon name: computer-vm
            Chassis: vm
@@ -167,7 +169,7 @@ Static hostname: LS-96.CAA900-2241.com
        CPE OS Name: cpe:/o:redhat:enterprise_linux:8.1:GA
             Kernel: Linux 4.18.0-147.57.1.el8_1.x86_64
       Architecture: x86-64
-
+```
 ### Creating & Configuring VM Images - Using Portal
 ### Azure Cost Analysis Charts
 ### Create Customized Azure Dashboard
